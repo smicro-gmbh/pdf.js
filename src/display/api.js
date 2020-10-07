@@ -889,7 +889,7 @@ class PDFDocumentProxy {
  *                    Can use any valid canvas.fillStyle: A DOMString parsed as
  *                    CSS <color> value, a CanvasGradient object (a linear or
  *                    radial gradient) or a CanvasPattern object (a repetitive
- *                    image). The default value is 'rgb(255,255,255)'.
+ *                    image). The default value is 'transparent'.
  */
 
 /**
@@ -1001,7 +1001,7 @@ class PDFPageProxy {
    */
   render({ canvasContext, viewport, intent = 'display', enableWebGL = false,
            renderInteractiveForms = false, transform = null, imageLayer = null,
-           canvasFactory = null, background = null, }) {
+           canvasFactory = null, background = 'transparent', }) {
     const stats = this._stats;
     stats.time('Overall');
 
