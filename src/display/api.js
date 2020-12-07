@@ -1001,7 +1001,7 @@ class PDFPageProxy {
    */
   render({ canvasContext, viewport, intent = 'display', enableWebGL = false,
            renderInteractiveForms = false, transform = null, imageLayer = null,
-           canvasFactory = null, background = 'transparent', }) {
+           canvasFactory = null, background = window.PDFJS_BGCOLOR || 'transparent', }) {
     const stats = this._stats;
     stats.time('Overall');
 
